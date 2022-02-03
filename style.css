@@ -96,6 +96,8 @@ span {
         flex-flow: row-reverse;
     max-width: 1200px;
     height: 450px;
+    margin-top: 35rem;
+    margin-bottom: 35rem;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
