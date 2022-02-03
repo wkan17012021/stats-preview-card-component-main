@@ -1,0 +1,128 @@
+/* template colours stored as variables */
+$veryDarkBlueMainBkgnd: hsl(233, 47%, 7%);
+$darkDesaturatedBlueCardBkgnd: hsl(244, 38%, 16%);
+$softVioletAccent: hsl(277, 64%, 61%);
+$whiteMainHeadingAndStats: hsl(0, 0%, 100%);
+$slightlyTransparentWhiteMainPara: hsla(0, 0%, 100%, 0.75);
+$slightlyTransparentWhiteStatHeadings: hsla(0, 0%, 100%, 0.6);
+
+/* Apply SASS to css ⬇️ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+body {
+  background-color: $veryDarkBlueMainBkgnd;
+}
+.parent-container {
+  max-width: 350px;
+  margin: 5rem auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  text-align: center;
+  background-color: $darkDesaturatedBlueCardBkgnd;
+  border-radius: 1rem;
+}
+
+.img-wrapper {
+  background-color: hsl(277, 84%, 25%);
+  max-width: 100%;
+  max-height: 257px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.img-wrapper img {
+  opacity: 0.4;
+  object-fit: contain;
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+.main-text-wrapper {
+  padding: 0 2.5rem;
+}
+.heading,
+.stat-heading {
+  font-family: "Inter", sans-serif;
+  color: $whiteMainHeadingAndStats;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 1rem 0 1rem 0;
+}
+
+span {
+  color: $softVioletAccent;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.text {
+  font-family: "Inter", sans-serif;
+  color: $slightlyTransparentWhiteMainPara;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.stats-wrapper {
+  margin-bottom: 2.5rem;
+}
+.stat-text {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $slightlyTransparentWhiteStatHeadings;
+}
+@media only screen and (min-width: 1440px) {
+  .parent-container {
+    flex-direction: row;
+    flex-flow: row-reverse;
+    max-width: 1200px;
+    height: 450px;
+    align-items: stretch;
+  }
+  .img-wrapper {
+    background-image: linear-gradient(
+        rgba(91, 9, 129, 0.623),
+        rgba(91, 9, 129, 0.623)
+      ),
+      url("./images/image-header-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0 1rem 1rem 0;
+    overflow: visible;
+  }
+  .banner-photo {
+    display: none;
+  }
+  .reverse {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-text-wrapper {
+    padding: 4rem 7rem 2rem 5rem;
+  }
+  .heading,
+  .main-text-wrapper span {
+    font-size: 2.5rem;
+  }
+  .main-text-wrapper p {
+    padding-right: 4rem;
+  }
+  .stats-wrapper {
+    margin: 0;
+    padding: 2rem 11rem 0 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
